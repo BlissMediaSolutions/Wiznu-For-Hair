@@ -10,3 +10,6 @@ All images supplied by Wiznu for Hair
 
 ![image](https://github.com/BlissMediaSolutions/Wiznu-For-Hair/assets/10906791/f0aa427a-9a04-4a98-968f-011690f5e132)
 
+![image](https://github.com/BlissMediaSolutions/Wiznu-For-Hair/assets/10906791/7bb02ceb-8c53-4d57-af72-5bb3e254de95)
+
+

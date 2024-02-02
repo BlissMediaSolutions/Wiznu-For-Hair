@@ -1,0 +1,50 @@
+.hover-top {
+	transition: ease-in-out all 0.35s;
+    transform: translateY(0);
+	&:hover {
+		transform: translateY(-10px);
+	}
+}
+
+.hover-top-in {
+     .hover-top--in {
+        transition: ease-in-out all 0.35s;
+        position: relative;
+        top: 0;
+    }
+    &:hover {
+        .hover-top--in {
+            top: -10px;
+        }
+    }
+}
+
+
+.hover-scale {
+    .hover-scale-in {
+        overflow: hidden;
+        img {
+            transition: ease all 0.35s;
+            transform: scale(1);
+        }
+    }
+    &:hover {
+        .hover-scale-in {
+            img {
+                transform: scale(1.05);
+            }
+        }   
+    }
+}
+
+.hover-opacity {
+    .hover-opacity-in {
+       opacity: 0;
+       transition: ease all 0.35s;
+    }
+    &:hover {
+        .hover-opacity-in {
+            opacity: 1;
+        }   
+    }
+}

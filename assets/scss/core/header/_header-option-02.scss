@@ -1,0 +1,39 @@
+.main-header-02 {
+    .header-top {
+        padding-top: 30px;
+        @include media-breakpoint-down(lg) {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+    .header-search {
+        position: relative;
+        width: 200px;
+        i {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            width: 30px;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .form-control {
+            border: none;
+            border-bottom: 1px solid transparent;
+            padding-left: 28px;
+            &:focus {
+                border-bottom: 1px solid var(--#{$prefix}gray-300);
+            }
+        }
+    }
+    .header-action {
+        width: 200px;
+    }
+    @include media-breakpoint-down(lg) {
+        .navbar {
+            --#{$prefix}navbar-padding-y: 0;
+        }
+    }
+}

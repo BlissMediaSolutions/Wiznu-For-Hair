@@ -1,0 +1,112 @@
+.footer-mode {
+    .footer-logo-light {
+        display: none;
+
+        [data-bs-theme="dark"] & {
+            display: block;
+        }
+    }
+
+    .footer-logo-dark {
+        display: none;
+
+        [data-bs-theme="light"] & {
+            display: block;
+        }
+    }
+}
+
+.footer-title-01 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 12px;
+    &:after {
+        content: "";
+        width: 40px;
+        height: 2px;
+        background-color: var(--#{$prefix}primary);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    @include media-breakpoint-down(lg) {
+        margin-bottom: 20px;
+    }
+}
+
+
+.footer-title-02 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+
+.footer-link-01 {
+    li {
+        position: relative;
+        padding-left: 20px;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 9px;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            border-top: 1px solid var(--#{$prefix}primary);
+            border-left: 1px solid var(--#{$prefix}primary);
+            transform: rotate(136deg);
+        }
+        + li {
+            margin-top: 15px;
+        }
+    }
+
+    a {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        --#{$prefix}text-opacity: 0.75;
+        &:hover {
+            color: var(--#{$prefix}footer-link-color-hover);
+            --#{$prefix}text-opacity: 1;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: auto;
+            right: 0;
+            width: 0px;
+            height: 1px;
+            transition: ease all 0.35s;
+            background: currentColor;
+        }
+
+        &:hover {
+            &:after {
+                left: 0;
+                right: auto;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.footer-link-02 {
+    li {
+        + li {
+            margin-top: 10px;
+        }
+    }
+    a {
+        &:hover {
+            color: var(--#{$prefix}primary) !important;
+        }
+    }
+}

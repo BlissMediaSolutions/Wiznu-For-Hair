@@ -33,7 +33,7 @@
 					});
 				},
 				errorPlacement: function(error, element) {
-					error.insertBefore( element );
+					error.insertAfter( element );
 				},
 				onkeyup: false,
 				onclick: false,

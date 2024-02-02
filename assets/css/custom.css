@@ -76,4 +76,10 @@
     background-repeat: no-repeat;
     }
 
+  /* JQuery Validate Error styling */
+  .error {
+    color: var(--bs-w-red);
+    font-size: smaller;
+  }
+
   

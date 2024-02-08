@@ -1,32 +1,35 @@
 <?php
 require_once "recaptcha/autoload.php";
-require_once "PHPMailer/class.phpmailer.php"
+require "PHPMailer/PHPMailer.php";
+require "PHPMailer/SMTP.php";
+require "PHPMailer/Exception.php";
 
 //ini_set('display_errors', 'On');
 //error_reporting(E_ALL | E_STRICT);
-session_cache_limiter('nocache');
-header('Expires: ' . gmdate('r', 0));
-header('Content-type: application/json');
+//session_cache_limiter('nocache');
+//header('Expires: ' . gmdate('r', 0));
+//header('Content-type: application/json');
 
-$mail = new PHPMailer;
-$mail->SMTPDebug = 2;
+$mail = new PHPMailer\PHPMailer\PHPMailer;
+$mail->SMTPDebug = 0; //Use 2 when debugging/testing, but for PROD use 0.
 $mail->isSMTP();
-$mail->Host = '  ' //SMTP server to send thru
+$mail->Host = '  ' ; //SMTP server to send thru
 $mail->SMTPAuth = true;  //Enable SMTP authentication
 $mail->Username = ' ';  //SMTP username
 $mail->Password = ' ';  //SMTP password for the username
 $mail->SMTPSecure = 'tls';  //Enable TLS Encryption
-$mail->Port = ' ';  //SMTP Port number with tls
+$mail->Port = '587';  //SMTP Port number with tls
 
-//$Recipient = 'someone@example.com'; // <-- Set your email here
-$mail->From = " ";  //the email address sending the email
-$mail->FromName = " "; //the name sending the email
-$Recipient = $mail->addAddress(' '); //the address the email is being sent to.
-//$resp = "";
+$Recipient = ' '; // Address email is being sent to
+$RcpName = ' ';
+
+$mail->setFrom(' ', ' ');  //the email address sending the email
+$mail->addAddress($Recipient, $RcpName); //the address the email is being sent to.
+$mail->addReplyTo(' ', ' ');  //The Reply to address for the sender
 
 // Register API keys at https://www.google.com/recaptcha/admin
-$siteKey = ""; //Add Site Key
-$secret = ""; //Add Secret Key
+$siteKey = " "; //Add Site Key
+$secret = " "; //Add Secret Key
 
 // reCAPTCHA supported 40+ languages listed here: https://developers.google.com/recaptcha/docs/language
 $lang = "en";
@@ -55,19 +58,11 @@ if ($Recipient && $resp->isSuccess() ) {
 
 	$mail->Subject = 'Website Enquiry';
 	$mail->Body = $Email_body;
-	//$Email_headers = "";
 
-	//$Email_headers .= 'From: ' . "Wiznu Website" . ' <' . "info@wiznu.com.au" . '>' . "\r\n".
-						"Reply-To: " .  $Email . "\r\n";
-
-	//$sent = mail($Recipient, "Website Inquiry", $Email_body, $Email_headers);
-
-
-	//if ($sent){
-	if ($mail->send()) {
+	if (!$mail->send()) {
+		$emailResult = array ('sent'=>'no', 'error'=>$mail->ErrorInfo );
+	} else {
 		$emailResult = array ('sent'=>'yes');
-	} else{
-		$emailResult = array ('sent'=>'no');
 	}
 
 	echo json_encode($emailResult);

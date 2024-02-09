@@ -82,4 +82,125 @@
     font-size: smaller;
   }
 
+  /* Animations for Home Screen - Navbar + Carousel Pations */
+  .fade-in-Header {
+    animation: fadeIn 3s;
+  }
+
+  .fade-in-Sub {
+      animation: fadeIn 5s;
+  }
+
+  .fade-in-border {
+      animation: fadeInBorder 6s;
+  }
+
+  .fade-in-Nav {
+      animation: fadeIn 7s;
+  }
+
+  .fade-in-line {
+      animation: fadeIn 9s ease-in-out;
+  }
+
+@keyframes fadeInBorder {
+    0% { border-color: transparent;
+        opacity: 0;
+        color: transparent;
+        background-color: transparent;
+        border-top: 0px dashed transparent;
+        }
+    100% {border-color: #fff;
+        opacity: 1;
+        color: #fff;
+        background-color: #fff;
+        border-top: 1px solid #fff;
+        }
+}
+
+@-moz-keyframes fadeInBorder {
+  0% { border-color: transparent;
+        opacity: 0;
+        color: transparent;
+        background-color: transparent;
+        border-top: 0px dashed transparent;
+    }
+  100% {border-color: #fff;
+        opacity: 1;
+        color: #fff;
+        background-color: #fff;
+        border-top: 1px solid #fff;
+    }
+}
+
+@-o-keyframes fadeInBorder {
+  0% { border-color: transparent;
+        opacity: 0;
+        color: transparent;
+        background-color: transparent;
+        border-top: 0px dashed transparent;
+    }
+  100% {border-color: #fff;
+        opacity: 1;
+        color: #fff;
+        background-color: #fff;
+        border-top: 1px solid #fff;
+    }
+}
+
+@-webkit-keyframes fadeInBorder {
+  0% { border-color: transparent;
+        opacity: 0;
+        color: transparent;
+        background-color: transparent;
+        border-top: 0px dashed transparent;
+    }
+  100% {border-color: #fff;
+        opacity: 1;
+        color: #fff;
+        background-color: #fff;
+        border-top: 1px solid #fff;
+    }
+}
+
+@-ms-keyframes fadeInBorder {
+  0% { border-color: transparent;
+        opacity: 0;
+        color: transparent;
+        background-color: transparent;
+        border-top: 0px dashed transparent;
+    }
+  100% {border-color: #fff;
+        opacity: 1;
+        color: #fff;
+        background-color: #fff;
+        border-top: 1px solid #fff;
+    }
+}
+
+  @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+  }
+
+  @-moz-keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+  }
+
+  @-webkit-keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+  }
+
+  @-o-keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+  }
+
+  @-ms-keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+  }
+
   

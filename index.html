@@ -27,74 +27,6 @@
 </head>
 
 <body>
-    <style>
-        .fade-in-Header {
-            animation: fadeIn 4s;
-        }
-
-        .fade-in-Sub {
-            animation: fadeIn 5s;
-        }
-
-        .fade-in-border {
-            animation: fadeInBorder 6s;
-        }
-
-        .fade-in-Nav {
-            animation: fadeIn 7s;
-        }
-
-        @keyframes fadeInBorder {
-            0% { border-color: transparent;
-                opacity: 0;
-                color: transparent;
-                background-color: transparent;
-                border-top: 0px dashed transparent;
-                }
-            100% {border-color: #fff;
-                opacity: 1;
-                color: #fff;
-                background-color: #fff;
-                border-top: 1px solid #fff;
-                }
-        }
-
-        @-moz-keyframes fadeInBorder {
-            0% {border-color: transparent;}
-            100% {background-color: #fff;}
-        }
-
-        @-o-keyframes fadeInBorder {
-            0% {border-color: transparent;}
-            100% {background-color: #fff;}
-        }
-
-        @keyframes fadeIn {
-            0% {opacity: 0;}
-            100% {opacity: 1;}
-        }
-
-        @-moz-keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-        }
-
-        @-webkit-keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-        }
-
-        @-o-keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-        }
-
-        @-ms-keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-        }
-
-    </style>
 <!-- Preload -->
 <!--<div id="loading" class="loading-preloader bg-dark">
     <div class="loading-preloader-in">
@@ -197,9 +129,13 @@
                         <img class="d-block w-100" src="assets/images/Wiznu-43.jpg" alt="Fourth Image">
                     </div>
                     <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0; z-index: 2;">
-                        <hr class="border border-white border-1 opacity-75 mx-lg-12 mx-sm-4 mb-1 fade-in-border">
+                        <div class="fade-in-line">
+                            <hr class="border border-white border-1 opacity-75 mx-lg-12 mx-sm-4 mb-1 fade-in-border">
+                        </div>
                         <p class="display-2 text-white mb-1 mt-2 fade-in-Header"><span style="color: red;">W</span>IZNU FOR <span style="color:red">H</span>AIR</p>
-                        <hr class="border border-white border-1 opacity-75 mx-lg-12 mx-sm-4 fade-in-border">
+                        <div class="fade-in-line">
+                            <hr class="border border-white border-1 opacity-75 mx-lg-12 mx-sm-4 fade-in-border">
+                        </div>
                         <p class="pt-3 lead text-white text-uppercase fade-in-Sub">The Hair Specialists</p>
                     </div>
                 </div>
